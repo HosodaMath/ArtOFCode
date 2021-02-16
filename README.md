@@ -1,1 +1,5 @@
 # ArtOFCode
+
+## Copyright
+
+ShingoHosoda
