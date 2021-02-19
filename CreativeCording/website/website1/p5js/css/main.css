@@ -1,0 +1,19 @@
+@charset "UTF-8";
+canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.header {
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+  background-color: rgb(112, 67, 0);
+  border: 5px solid rgb(255, 255, 255);
+}
+.title {
+  color: #ffffff;
+}
