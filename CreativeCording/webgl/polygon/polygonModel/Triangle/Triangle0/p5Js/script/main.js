@@ -72,13 +72,48 @@ let drawTriangle2NormalMaterial = () => {
     pop();
 }
 
-let drawTriangle2Material = () => {
+let drawTriangle2Material1 = () => {
     push();
     ambientMaterial(100, 200, 100);
-    ambientLight(100 ,200 ,100)
+    ambientLight(100, 200, 100)
     noStroke();
     translate(0.0, 0.0, 0.0);
     scale(100);
+
+    beginShape(TRIANGLES);
+    vertex(- 1.0, 1.0, 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(1.0, 1.0, 1.0);
+
+    vertex(1.0, 1.0, 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(0.0, 1.0, - 1.0);
+
+    vertex(0.0, 1.0, - 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(- 1.0, 1.0, 1.0);
+
+    vertex(- 1.0, 1.0, 1.0);
+    vertex(1.0, 1.0, 1.0);
+    vertex(0.0, 1.0, - 1.0);
+    endShape(CLOSE);
+
+    pop();
+}
+
+let drawTriangle2Material2 = () => {
+    push();
+
+    noStroke();
+    translate(0.0, 0.0, 0.0);
+    scale(100);
+
+
+    let dirX = (mouseX / width - 0.5) * 2;
+    let dirY = (mouseY / height - 0.5) * 2;
+    console.log(-dirX, -dirY);
+    directionalLight(200, 250, 200, -dirX, -dirY, -1);
+    ambientMaterial(200, 255, 200);
 
     beginShape(TRIANGLES);
     vertex(- 1.0, 1.0, 1.0);
@@ -107,5 +142,6 @@ function draw() {
 
     //drawTriangle1FIllStroke();
     //drawTriangle2NormalMaterial();
-    drawTriangle2Material();
+    //drawTriangle2Material1();
+    drawTriangle2Material2();
 }
