@@ -3,7 +3,7 @@ function setup() {
     frameRate(60);
 }
 
-let drawTriangle = () => {
+let drawTriangle1FIllStroke = () => {
     push();
 
     strokeWeight(1.0);
@@ -42,9 +42,70 @@ let drawTriangle = () => {
     pop();
 }
 
+let drawTriangle2NormalMaterial = () => {
+    push();
+
+    noStroke();
+    translate(0.0, 0.0, 0.0);
+    scale(100);
+
+    normalMaterial();
+
+    beginShape(TRIANGLES);
+    vertex(- 1.0, 1.0, 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(1.0, 1.0, 1.0);
+
+    vertex(1.0, 1.0, 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(0.0, 1.0, - 1.0);
+
+    vertex(0.0, 1.0, - 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(- 1.0, 1.0, 1.0);
+
+    vertex(- 1.0, 1.0, 1.0);
+    vertex(1.0, 1.0, 1.0);
+    vertex(0.0, 1.0, - 1.0);
+    endShape(CLOSE);
+
+    pop();
+}
+
+let drawTriangle2Material = () => {
+    push();
+    ambientMaterial(100, 200, 100);
+    ambientLight(100 ,200 ,100)
+    noStroke();
+    translate(0.0, 0.0, 0.0);
+    scale(100);
+
+    beginShape(TRIANGLES);
+    vertex(- 1.0, 1.0, 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(1.0, 1.0, 1.0);
+
+    vertex(1.0, 1.0, 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(0.0, 1.0, - 1.0);
+
+    vertex(0.0, 1.0, - 1.0);
+    vertex(0.0, 0.0, 0.0);
+    vertex(- 1.0, 1.0, 1.0);
+
+    vertex(- 1.0, 1.0, 1.0);
+    vertex(1.0, 1.0, 1.0);
+    vertex(0.0, 1.0, - 1.0);
+    endShape(CLOSE);
+
+    pop();
+}
+
 function draw() {
     orbitControl();
     background(0, 0, 0);
 
-    drawTriangle();
+    //drawTriangle1FIllStroke();
+    //drawTriangle2NormalMaterial();
+    drawTriangle2Material();
 }
