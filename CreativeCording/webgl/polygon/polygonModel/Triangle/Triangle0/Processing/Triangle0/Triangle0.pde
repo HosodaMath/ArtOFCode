@@ -34,11 +34,11 @@ void drawTriangleFill1()
     vertex(0.0F, 0.0F, 0.0F);
     vertex(0.0F, 100.0F, - 100.0F);
     
-    stroke(color(250, 50, 50, 200));
-    fill(color(250, 50, 50, 200));
-    vertex(0.0F, 100.0F, - 100.0F);
+   stroke(color(200, 250, 200, 200));
+    fill(color(250, 250, 50, 200));
+    vertex(100.0F, 100.0F, 100.0F);
     vertex(0.0F, 0.0F, 0.0F);
-    vertex(- 100.0F, 100.0F, 100.0F);
+    vertex(0.0F, 100.0F, - 100.0F);
     
     stroke(color(200, 250, 200, 200));
     fill(color(50, 50, 250, 200));
