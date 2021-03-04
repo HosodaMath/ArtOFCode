@@ -20,46 +20,6 @@ function setup() {
 
 }
 
-/**
- * 
- * @param {color | string} stroke_color 
- * @param {number} stroke_weight 
- */
-/*
-let polygon = (stroke_color, stroke_weight = 1.0) => {
-    push();
-    noFill();
-    stroke(stroke_color);
-    strokeWeight(stroke_weight);
-    beginShape();
-    for(let count = 0; count < wave_data.length; count++){
-        vertex(wave_data[count].x, wave_data[count].y);
-    }
-    endShape();
-    pop();
-}
-
-let generate_wave_data = () => {
-    for (let count_x = 0; count_x < width; count_x++) {
-        angle += angleV;
-        angleV += 0.0001;
-        let count_y = map(sin(angle), START1, STOP1, START2, STOP2);
-        let tmp = createVector(count_x, count_y);
-        wave_data.push(tmp);
-        
-    }
-    console.log(wave_data);
-    return wave_data;
-}
-
-let render_wave = () => {
-    push();
-    translate(0, height / 2);
-    polygon(color(255, 230, 20));
-    pop();
-}
-*/
-
 let set_background = () => {
     background(0, 0, 0);
     //render_wave();
