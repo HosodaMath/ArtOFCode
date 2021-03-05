@@ -8,7 +8,7 @@ const START2 = - 200.0;
 const STOP2 = 200.0;
 const colors = [];
 function setup() {
-    createCanvas(1024, 1024);
+    createCanvas(1024, 1024, WEBGL);
     noStroke();
     frameRate(60);
     total = floor(width / (r * 2));
@@ -27,7 +27,7 @@ let setBackground = () => {
 
 function draw() {
     setBackground();
-    translate(width / 2, height / 2, 0.0);
+    translate(0.0, 0.0, 0.0);
     ambientLight(127, 127, 127);
     pointLight(255, 255, 255, - 100, - 100, 400);
     ambientMaterial(255);
