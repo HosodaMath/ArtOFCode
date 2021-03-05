@@ -26,7 +26,9 @@ void setBackground() {
 void draw() {
     setBackground();
     translate(width / 2, height / 2, 0.0F);
-    fill(255, 230, 20);
+    ambientLight(127, 127, 127);
+    pointLight(255, 255, 255, - 100, - 100, 400);
+    ambient(255);
     pushMatrix();
     for (int count = 0; count < total; count++) {
         float x = map(count, 0, angles.length, - 300, 300);
