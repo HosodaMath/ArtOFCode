@@ -8,8 +8,10 @@ final float START2 = - 400.0F;
 final float STOP2 = 400.0F;
 color colors[];
 void setup() {
-    size(1024, 1024, P3D);
+    //size(1024, 1024, P3D);
+    fullScreen(P3D);
     frameRate(60);
+    noStroke();
     total = floor(width / (r * 2));
     angles = new float[total];
     angleV = new float[total];
@@ -34,19 +36,19 @@ void draw() {
     pointLight(155, 255, 155, - 100, - 100, 400);
     ambient(255);
     pushMatrix();
+    rotateX(frameCount * 0.01);
     for (int count = 0; count < total; count++) {
         float x = map(count, 0, angles.length, - 400, 400);
         float y = map(sin(angles[count]), START1, STOP1, START2, STOP2);
+        float z = map(count, 0, angles.length, - 400, 400);
         ambient(colors[count]);
         pushMatrix();
-        translate(x, y, 0);
-        stroke(colors[count]);
-        line(x, 0, x, y, 0, 0);
-        noStroke();
+        translate(x, y, z);
         box(r * 2);
-        //sphere(r * 2);
         angles[count] += angleV[count];
         popMatrix();
     }
     popMatrix();
+
+    //saveFrame("frames/######.png");
 }
