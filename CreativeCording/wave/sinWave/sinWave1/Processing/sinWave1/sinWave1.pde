@@ -7,7 +7,7 @@ final float STOP1 = 1.0F;
 final float START2 = - 200.0F;
 final float STOP2 = 200.0F;
 void setup() {
-    size(800, 800);
+    size(1024, 1024);
     frameRate(60);
     total = floor(width / (r * 2));
     angles = new float[total];
