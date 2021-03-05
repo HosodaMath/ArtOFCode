@@ -35,7 +35,7 @@ function draw() {
     for (let count = 0; count < total; count++) {
         let x = map(count, 0, angles.length, - 300, 300);
         let y = map(sin(angles[count]), START1, STOP1, START2, STOP2);
-        ambient(colors[count]);
+        ambientMaterial(colors[count]);
         push();
         translate(x, y, 0);
         sphere(r * 2);
