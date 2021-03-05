@@ -23,6 +23,7 @@ void setBackground() {
 }
 
 void draw() {
+    setBackground();
     translate(width / 2, height / 2);
     fill(255, 230, 20);
     strokeWeight(1);
