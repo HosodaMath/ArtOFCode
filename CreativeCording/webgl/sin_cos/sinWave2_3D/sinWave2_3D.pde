@@ -4,8 +4,8 @@ float r = 16.0F;
 int total = 0;
 final float START1 = - 1.0F;
 final float STOP1 = 1.0F;
-final float START2 = - 200.0F;
-final float STOP2 = 200.0F;
+final float START2 = - 400.0F;
+final float STOP2 = 400.0F;
 color colors[];
 void setup() {
     size(1024, 1024, P3D);
@@ -36,12 +36,13 @@ void draw() {
     ambient(255);
     pushMatrix();
     for (int count = 0; count < total; count++) {
-        float x = map(count, 0, angles.length, - 300, 300);
+        float x = map(count, 0, angles.length, - 400, 400);
         float y = map(sin(angles[count]), START1, STOP1, START2, STOP2);
         ambient(colors[count]);
         pushMatrix();
         translate(x, y, 0);
-        sphere(r * 2);
+        box(r * 2);
+        //sphere(r * 2);
         angles[count] += angleV[count];
         popMatrix();
     }
