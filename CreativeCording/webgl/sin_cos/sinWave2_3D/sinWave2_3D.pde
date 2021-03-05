@@ -9,7 +9,6 @@ final float STOP2 = 400.0F;
 color colors[];
 void setup() {
     size(1024, 1024, P3D);
-    noStroke();
     frameRate(60);
     total = floor(width / (r * 2));
     angles = new float[total];
@@ -41,6 +40,9 @@ void draw() {
         ambient(colors[count]);
         pushMatrix();
         translate(x, y, 0);
+        stroke(colors[count]);
+        line(x, 0, x, y, 0, 0);
+        noStroke();
         box(r * 2);
         //sphere(r * 2);
         angles[count] += angleV[count];
