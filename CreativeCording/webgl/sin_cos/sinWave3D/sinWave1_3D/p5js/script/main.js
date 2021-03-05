@@ -21,6 +21,26 @@ function setup() {
     }
 }
 
-function draw() {
+let setBackground = () => {
+    background(0, 0, 0);
+}
 
+function draw() {
+    setBackground();
+    translate(width / 2, height / 2, 0.0);
+    ambientLight(127, 127, 127);
+    pointLight(255, 255, 255, - 100, - 100, 400);
+    ambientMaterial(255);
+    push();
+    for (let count = 0; count < total; count++) {
+        let x = map(count, 0, angles.length, - 300, 300);
+        let y = map(sin(angles[count]), START1, STOP1, START2, STOP2);
+        ambient(colors[count]);
+        push();
+        translate(x, y, 0);
+        sphere(r * 2);
+        angles[count] += angleV[count];
+        pop();
+    }
+    pop();
 }
