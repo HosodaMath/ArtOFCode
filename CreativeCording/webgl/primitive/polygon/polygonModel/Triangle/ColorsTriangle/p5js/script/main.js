@@ -47,12 +47,14 @@ let setTriangle = () => {
         );
 
         velocity1[count] = createVector(
-            0, random(1, 3), 0
+            0, random(1, 2), 0
         );
 
-        
+        size[count] = random(50, 100);
     }
 }
+
+
 
 function draw() {
     background(0, 0, 0);
