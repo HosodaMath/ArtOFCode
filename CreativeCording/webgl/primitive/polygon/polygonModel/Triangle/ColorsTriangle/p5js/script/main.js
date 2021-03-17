@@ -13,7 +13,7 @@ class Triangle {
         }
     }
 
-    drawTriangle(){
+    drawTriangle() {
         push();
         scale(50);
         beginShape(TRIANGLES);
@@ -28,11 +28,31 @@ class Triangle {
     }
 }
 
+let location1 = [];
+let velocity1 = [];
+let size1 = [];
+const MAX = 10;
 function setup() {
     createCanvas(windowWidth, windowHeight, WEBGL);
     noStroke();
 }
 
+let setTriangle = () => {
+    let depth = width;
+    for (let count = 0; count < MAX; count++) {
+        location1[count] = createVector(
+            random(-width / 2.0, width / 2.0),
+            random(-height / 2.0, height / 2.0),
+            random(0, random(0, depth / 2.0))
+        );
+
+        velocity1[count] = createVector(
+            0, random(1, 3), 0
+        );
+
+        
+    }
+}
 
 function draw() {
     background(0, 0, 0);
