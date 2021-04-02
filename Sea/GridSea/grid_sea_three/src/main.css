@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+h1, h2, h3, p {
+  color: #f0f8ff;
+}
