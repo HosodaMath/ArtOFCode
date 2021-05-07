@@ -1,0 +1,33 @@
+{
+  "name": "mask_paint",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w",
+    "start": "webpack serve"
+  },
+  "keywords": [],
+  "author": "Shingo Hosoda",
+  "license": "MIT",
+  "devDependencies": {
+    "@tonejs/ui": "^0.1.5",
+    "css-loader": "^5.2.4",
+    "style-loader": "^2.0.0",
+    "tone": "^14.7.77",
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^5.0.13",
+    "@types/dat.gui": "^0.7.6",
+    "bootstrap": "^5.0.0",
+    "dat.gui": "^0.7.7",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}

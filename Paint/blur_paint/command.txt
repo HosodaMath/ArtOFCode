@@ -1,0 +1,5 @@
+npm i -D webpack webpack-cli webpack-dev-server
+npm i -D typescript ts-loader style-loader css-loader
+npm i -S bootstrap @types/bootstrap jquery popper.js
+npm install --save dat.gui @types/dat.gui
+npm i -D tone @tonejs/ui
