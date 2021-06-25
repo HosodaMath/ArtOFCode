@@ -1,0 +1,10 @@
+/*! p5.js v1.3.1 March 28, 2021 */
+
+/**
+ * @description
+ * @class Vector2
+ * @todo Translation from Japanese to English
+ * @license MIT
+ * @author Shingo Hosoda
+ * @copyright Shingo Hosoda
+ */
