@@ -1,3 +1,4 @@
+//Teamplateの作成中ですコードがごちゃごちゃしてごめんなさい😔
 precision highp float;
 uniform vec2 resolution;
 uniform vec2 mouse;
@@ -6,9 +7,6 @@ uniform float time;
 varying vec2 vTexCoord;
 const float PI2 = 6.28318530718;
 const float PI = 3.141592653589793;
-
-// Teamplate 
-// まだ作成段階😔
 
 // 回転
 vec2 rotate(vec2 position, float radian){ 

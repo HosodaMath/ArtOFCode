@@ -1,4 +1,4 @@
-//Teamplatの作成中ですコードがごちゃごちゃしてごめんなさい😔
+//Teamplateの作成中ですコードがごちゃごちゃしてごめんなさい😔
 precision highp float;
 uniform vec2 resolution;
 uniform vec2 mouse;
