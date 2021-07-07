@@ -23,7 +23,7 @@ function draw() {
     push();
     for (let countX = 0; countX < 5; countX++) {
         push();
-        for (let countY = 0; countY < 50; countY++) {
+        for (let countY = 0; countY < 100; countY++) {
 
             {
             
@@ -31,7 +31,7 @@ function draw() {
                 translate(
                     cos(frameCount * 0.0001 + countX) * 100,
                     sin(frameCount * 0.0001 + countX) * 100,
-                    tan(frameCount * 0.0001 + countX) * 10
+                    cos(frameCount * 0.0001 + countX) * 100
                 );
                 
                 rotateX(frameCount / 60);
@@ -49,7 +49,7 @@ function draw() {
     push();
     for (let countX = 0; countX < 5; countX++) {
         push();
-        for (let countY = 0; countY < 50; countY++) {
+        for (let countY = 0; countY < 100; countY++) {
 
             {
             
@@ -57,7 +57,7 @@ function draw() {
                 translate(
                     cos(frameCount * 0.0001 + countX) * 100,
                     sin(frameCount * 0.0001 + countX) * 100,
-                    tan(frameCount * 0.0001 + countX) * 10
+                    cos(frameCount * 0.0001 + countX) * 100
                 );
                 
                 rotateX(frameCount / 60);

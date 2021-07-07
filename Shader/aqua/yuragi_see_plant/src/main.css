@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background: linear-gradient(#8484ff, #3e3eb1, #15157a, #020242);
+}
