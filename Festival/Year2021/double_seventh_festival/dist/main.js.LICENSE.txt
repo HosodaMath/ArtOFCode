@@ -1,0 +1,9 @@
+/**
+ * @description GitHub Code
+ * https://github.com/HosodaMath/MathematicsStudyNote/blob/main/LinearAlgebra/TypeScript/src/vector/src/vector/vector2.ts
+ * @class Vector2
+ * @todo Translation from Japanese to English
+ * @license MIT
+ * @author Shingo Hosoda
+ * @copyright Shingo Hosoda
+ */
