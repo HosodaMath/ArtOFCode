@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#play, #stop {
+  background: #000000;
+  color: #f3f8f7;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+#play:hover, #stop:hover {
+  background: #f3f8f7;
+  color: #000000;
+  cursor: pointer;
+}
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background: radial-gradient(#f3f8f7, #88fcfc, #33ecec);
+}
