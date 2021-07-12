@@ -1,0 +1,1 @@
+export { colorRGB } from "./rgb";
