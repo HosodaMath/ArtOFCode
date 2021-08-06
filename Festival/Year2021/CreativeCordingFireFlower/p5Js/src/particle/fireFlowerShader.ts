@@ -36,15 +36,14 @@ export class FireFlowerShader {
     this.fireLocation.add(this.fireVelocity);
   };
 
-  drawParticle = () => {
+  drawParticle = (rgb: number[]) => {
     this.p.shader(this.fireColor);
-    this.fireColor.setUniform("time", this.p.frameCount * 0.5);
-    this.fireColor.setUniform("uFrameCount", this.p.frameCount);
-    this.fireColor.setUniform("uTexture", this.fireColorImage);
+    this.fireColor.setUniform("uColor", rgb);
     this.p.push();
     // this.p.stroke(this.fireColor);
     this.p.noStroke();
     this.p.translate(this.fireLocation.x, this.fireLocation.y);
+    this.p.rotate(this.p.radians(this.p.frameCount * 0.05));
     Geometry.Object2D.star(this.p, this.fireSize, 5, 200);
     this.p.pop();
     this.p.resetShader();

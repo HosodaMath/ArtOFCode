@@ -7,6 +7,8 @@ import "sanitize.css";
 import "./main.css";
 
 const sketch = (p: P5) => {
+  const MAX = 20;
+
   let fire_flower: Particle.FireFlowerShader[] = [];
   let moonNight: P5.Shader;
   let fireFlowerShader: P5.Shader;
@@ -23,14 +25,10 @@ const sketch = (p: P5) => {
   };
 
   const createFireFlower = () => {
-    const MAX = 20;
     [...Array(MAX).keys()].forEach((_count) => {
-      const fireLocation = new GLMath.Vector2(
-        p.random(-1, 1),
-        p.random(-1, 1)
-      );
+      const fireLocation = new GLMath.Vector2(p.random(-1, 1), p.random(-1, 1));
       const fireVelocity = new GLMath.Vector2(p.random(-1, 1), p.random(-1, 1));
-      const fireSize = p.random(5, 10);
+      const fireSize = p.random(10, 20);
 
       fire_flower.push(
         new Particle.FireFlowerShader(
@@ -58,7 +56,11 @@ const sketch = (p: P5) => {
   const renderFireFlower = () => {
     [...Array(fire_flower.length).keys()].forEach((count) => {
       fire_flower[count].updateParticle();
-      fire_flower[count].drawParticle();
+      fire_flower[count].drawParticle([
+        p.random(0.5, 1.0),
+        p.random(0.5, 1.0),
+        p.random(0.5, 1.0),
+      ]);
     });
   };
 
