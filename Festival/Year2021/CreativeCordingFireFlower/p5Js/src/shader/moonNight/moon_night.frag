@@ -1,70 +1,49 @@
 precision highp float;
-precision highp int;
-
 uniform vec2 resolution;
 uniform vec2 mouse;
 uniform float time;
-// out
 varying vec2 vTexCoord;
-#define PI2 6.28318530718
-#define PI 3.141592653589793
+const float PI2 = 6.28318530718;
+const float PI = 3.141592653589793;
 
-vec2 wave_effect(vec2 coord){
-  coord.x += 0.0035 * sin(coord.y * 100.0 + time * PI2);
-  coord.x += 0.0015 * cos(coord.y * 250.0 + time * PI2);
-  
-  coord.y += 0.0035 * sin(coord.y * 100.0 + time * PI2);
-  coord.y += 0.0015 * cos(coord.y * 250.0 + time * PI2);
-  
-  return coord;
+vec3 fade(vec3 v){
+  return vec3(1.0, 1.0, 1.0);
 }
 
-float gRect(vec2 position, vec2 size){
-  position = abs(position) - size;
-  return length(max(position, 0.0)) + min(max(position.x, position.y), 0.0);
+vec2 rotate(vec2 position, float radian){
+  float cs = cos(radian);
+  float sn = sin(radian);
+
+  return position * mat2(cs, -sn, sn, cs);
 }
 
-float gCircle(vec2 position, float radius){
-  return length(position) - radius;
-}
+vec3 starFeild(vec2 position2, float radian, vec3 background_color){
+  float grad = 0.0;
+  float fade = 0.0;
+  float z = 0.0;
+  vec2 centered_coord = position2 - vec2(cos(time * 0.1), sin(time * 0.1));
+  centered_coord = rotate(centered_coord, radian);
 
-vec2 translate(vec2 position, vec2 offset){
-  return position - offset;
-}
+  for(float i = 1.0; i <= 50.0; i++){
+    vec2 star_position = vec2(cos(i) * 250.0, sin(i * i * i) * 250.0);
+    float z = mod(i * i - 10.0 * time, 256.0);
+    float fade = (256.0 - z) / 256.0;
+    vec2 blob_coord = star_position / z;
+    grad += ((fade / 384.0) / pow(length(centered_coord - blob_coord), 1.5) * fade );
+  }
 
+  background_color += grad;
 
-vec3 background(vec2 position){
-  vec3 seaColor1 = vec3(0.0745, 0.0784, 0.2392);
-  vec3 seaColor2 = vec3(0.0353, 0.0706, 0.3882);
-
-  vec3 seaColor = mix(seaColor1, seaColor2, position.y);
-
-  return seaColor;
-}
-
-vec3 create(vec2 position){
-  
-  vec2 size = vec2(0.25, 0.25);  
-
-  position = translate(position, vec2(cos(time * 0.05), 0.2));
-  float radius = 0.05;
-  float circle = gCircle(position, radius);
-  
-  float d = circle;
-  
-  vec3 color1 = vec3(1.0, 1.0, 0.5);
-  vec3 color2 = background(position);
-
-  vec3 color = mix(color1, color2, smoothstep(-0.005, 0.005, d));
-
-  return color;
+  return background_color;
 }
 
 void main(){
-  vec2 position = vTexCoord;
+  float radian = radians(time * 3.15);
+  vec3 background_color = mix(vec3(0.0157, 0.0, 0.2078),vec3(0.0902, 0.1176, 0.3686), vTexCoord.y);
+  float scale = tan(0.3 * time) + 5.0;
+  vec2 position2 = ((vTexCoord - 0.5) * scale);
   
-  position = wave_effect(position);
+  vec3 star_field = starFeild(position2, radian, background_color);
 
-  vec3 color = create(position);
-  gl_FragColor = vec4(color, 1.0);
+  gl_FragColor = vec4(star_field, 1.0);
 }

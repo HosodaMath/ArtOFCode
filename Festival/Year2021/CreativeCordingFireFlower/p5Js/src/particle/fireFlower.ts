@@ -39,7 +39,7 @@ export class FireFlower {
     // this.p.stroke(this.fireColor);
     this.p.noStroke();
     this.p.translate(this.fireLocation.x, this.fireLocation.y);
-    Geometry.Object2D.circle(this.p, this.fireSize);
+    Geometry.Object2D.star(this.p, this.fireSize);
     this.p.pop();
   };
 }

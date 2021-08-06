@@ -2,33 +2,44 @@ import * as P5 from "p5";
 import * as GLMath from "./math/GLMath";
 import * as Shader from "./shader/shader";
 import * as Particle from "./particle/particle";
+import Texture from "./image/noise.png";
 import "sanitize.css";
 import "./main.css";
 
 const sketch = (p: P5) => {
-  let fire_flower: Particle.FireFlower[] = [];
+  let fire_flower: Particle.FireFlowerShader[] = [];
   let moonNight: P5.Shader;
+  let fireFlowerShader: P5.Shader;
+  let texture: P5.Image;
+  p.preload = () => {
+    texture = p.loadImage(Texture);
+  };
+
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
     p.noStroke();
     moonNight = Shader.initMoonNight(p);
+    fireFlowerShader = Shader.initFireFlowerShader(p);
   };
 
   const createFireFlower = () => {
-    const MAX = 50;
-    [...Array(MAX).keys()].forEach((count) => {
-      const fireLocation = new GLMath.Vector2(0.0, 0.0);
+    const MAX = 20;
+    [...Array(MAX).keys()].forEach((_count) => {
+      const fireLocation = new GLMath.Vector2(
+        p.random(-1, 1),
+        p.random(-1, 1)
+      );
       const fireVelocity = new GLMath.Vector2(p.random(-1, 1), p.random(-1, 1));
-      const fireSize = 2.0;
-      const fireColor = p.color(`hsla(${count * 7}, 100%, 50%, 0.5)`);
+      const fireSize = p.random(5, 10);
 
       fire_flower.push(
-        new Particle.FireFlower(
+        new Particle.FireFlowerShader(
           p,
           fireLocation,
           fireVelocity,
           fireSize,
-          fireColor
+          texture,
+          fireFlowerShader
         )
       );
     });
@@ -39,7 +50,7 @@ const sketch = (p: P5) => {
       createFireFlower();
     }
 
-    if (fire_flower.length > 60) {
+    if (fire_flower.length > 40) {
       fire_flower.splice(0, 1);
     }
   };

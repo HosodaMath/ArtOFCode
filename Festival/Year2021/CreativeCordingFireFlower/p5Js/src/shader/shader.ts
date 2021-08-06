@@ -20,3 +20,5 @@ export {
 } from "./rgbMirror/rgbMirrorRGBShift";
 
 export { initMoonNight, drawMoonNight } from "./moonNight/moon_night";
+
+export { initFireFlowerShader } from "./fireFlower/fireFlower";

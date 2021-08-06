@@ -1,1 +1,2 @@
-export { FireFlower } from "./fireFlower"
+export { FireFlower } from "./fireFlower";
+export { FireFlowerShader } from "./fireFlowerShader";
