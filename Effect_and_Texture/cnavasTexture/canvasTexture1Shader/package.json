@@ -1,0 +1,19 @@
+{
+  "name": "helloworld",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@types/p5": "^1.3.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4"
+  },
+  "dependencies": {
+    "p5": "^1.4.0",
+    "sanitize.css": "^12.0.1",
+    "wscat": "^5.0.0"
+  }
+}
