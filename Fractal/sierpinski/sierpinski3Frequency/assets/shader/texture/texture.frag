@@ -12,7 +12,7 @@ varying vec4 vertTexCoord;
 #define PI2 6.28318530718
 
 vec2 wave_effect(vec2 coord){
-  float frequency = clamp(cos(uTime) * 5.0, 1.0, 10.0);
+  float frequency = clamp(cos(uTime) * 5.0, 1.0, 5.0);
 
   coord.x += 0.0035 * cos(coord.x * 100.0 + uTime * PI2) * frequency;
   coord.x += 0.0015 * cos(coord.x * 250.0 + uTime * PI2) * frequency;
