@@ -163,8 +163,10 @@ vec3 createWarter(vec2 position){
     vec3(0.1, 0.45, 1.0), 
     clamp(length(r.x), 0.0, 1.0)
   );
+  
+  vec3 calcColor = vec3(f * f * f + 0.6 * f * f + 0.5 * f) * color;
 
-  return color;
+  return calcColor;
 }
 
 vec3 createMainColor(vec2 coord){
