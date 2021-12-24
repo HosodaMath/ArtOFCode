@@ -18,5 +18,5 @@ void draw() {
   snowParticle.updateParticleSystem();
   
   // 風をコントロールする
-  snowParticle.windController();
+  // snowParticle.windController();
 }
