@@ -6,7 +6,7 @@
  * @author Shingo Hosoda
  * @copyright Shingo Hosoda
  */
- export class Vector2 {
+export class Vector2 {
   public x: number;
   public y: number;
   /**
