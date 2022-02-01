@@ -1,0 +1,24 @@
+html {
+  font-size: 100%;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.fullScreenButton {
+  font-size: 0.5rem;
+  border: none;
+  border-radius: 32px;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  width: 64px;
+  height: 32px;
+}
