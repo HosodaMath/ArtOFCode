@@ -1,0 +1,28 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #2b2b2b;
+  color: #f0f8ff;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.fullScreenButton {
+  border: none;
+  border-radius: 32px;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  width: 64px;
+  height: 32px;
+}
