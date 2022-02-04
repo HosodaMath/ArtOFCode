@@ -8,7 +8,11 @@ Day4以降はNoteに記載します。
 
 実装した成果物は以下にあります。
 
+[GitHub](https://github.com/HosodaMath/ArtOFCode/tree/main/Festival/Year2022/AltEdu2022/day4)
+
 デモは以下にあります。
+
+[Demo](https://hosodamath.github.io/audioVisualization/)
 
 p5.jsの標準にあるオーディオ関数を使っていないためソースコードの桁数が大きくなりました、しかしサウンド周りで複雑なことをするにはWeb Audio APIの習得は必須だと思うのでかなり仕様書を読んで実装するとかなり勉強になります。
 
