@@ -12,7 +12,11 @@
 
 実装した成果物は以下にあります。
 
+[GitHub](https://github.com/HosodaMath/ArtOFCode/tree/main/Festival/Year2022/AltEdu2022/day6)
+
 デモは以下にあります。
+
+[Demo](https://hosodamath.github.io/noiseSoundVisualization/)
 
 Web Audio APIの部分は[AltEdu2022 Day4](https://note.com/hosoda_math/n/n344d43487413)と変わりません。
 
