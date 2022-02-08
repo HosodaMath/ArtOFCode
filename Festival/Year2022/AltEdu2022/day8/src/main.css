@@ -1,0 +1,112 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color:#faebd7;
+  color: #2b2b2b;
+  line-height: 2.0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.pageTitle {
+  font-size: 4rem;
+  font-family: serif;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.projectTitle {
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+.contentsMessage {
+  border: 5px dashed black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.codeContents,
+.bookContents,
+.sketchContents {
+  margin-top: 5%;
+}
+
+.codeContents p,
+.bookContents p,
+.sketchContents p {
+  font-size: 1.125rem;
+  margin: 10px 0 0;
+}
+
+.codeGrid,
+.bookGrid,
+.sketchGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.codeImg,
+.bookImg,
+.sketchImg {
+  transition: box-shadow 1s ease-in, transform 2s ease-out;
+  box-shadow: 0 15px 10px 5px #29292900;
+}
+
+.codeImg:hover,
+.bookImg:hover,
+.sketchImg:hover {
+  box-shadow: 0 15px 10px 5px #29292975;
+  transform: translate(-5px, -5px);
+}
+
+.itemDescription {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.useSkillList {
+  display: flex;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.fullScreenButton {
+  background-color: #636363;
+  color: #f0f8ff;
+  font-size: 0.5rem;
+  border: 2px dashed #f0f8ff;
+  border-radius: 5%;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: 64px;
+  height: 32px;
+}
