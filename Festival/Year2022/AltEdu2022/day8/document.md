@@ -4,13 +4,17 @@
 
 実装した成果物は以下にあります。
 
-[GitHub]()
+[GitHub](https://github.com/HosodaMath/ArtOFCode/tree/main/Festival/Year2022/AltEdu2022/day8)
 
 デモは以下にあります。
 
-[Demo]()
+今回は比較検討のため簡単なランディングページになっています。
+
+[Demo](https://hosodamath.github.io/canvasSound/)
 
 聞いていた曲はTRUEさんのWILLとDREAM SOLISTERです。
+
+今回はWebに関わる複数のAPIを使って実装しているので実装は若干難しかったです。
 
 作成したものはWeb Audio APIでp5.jsを使って作成したスケッチ自体を動かしています。
 
@@ -32,5 +36,7 @@ canvas要素をCSSのTransformで動かしています。アニメーション�
   frameCount = requestAnimationFrame(canvasAnimation);
 };
 ```
+
+今回はCSSのみを使っていますが今度はWebGLあるいはWebGPUとDOMを組み合わせたものにも挑戦したいと思います。
 
 本日は以上です。
