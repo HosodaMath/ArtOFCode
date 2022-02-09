@@ -1,4 +1,4 @@
-# AltEdu2022 Day8の解説記事
+# AltEdu2022 Day9の解説記事
 
 今日のテーマはにおいや手触りのような感覚をコードで表現してください。
 
@@ -8,11 +8,11 @@
 
 実装した成果物は以下にあります。
 
-[GitHub]()
+[GitHub](https://github.com/HosodaMath/ArtOFCode/tree/main/Festival/Year2022/AltEdu2022/day9)
 
 デモは以下にあります。
 
-[Demo]()
+[Demo](https://hosodamath.github.io/starParticleWindSound/)
 
 次はp5.jsやProcessingでザラザラ感なものも作ってみたいと思います。
 
