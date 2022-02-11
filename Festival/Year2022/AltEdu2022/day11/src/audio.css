@@ -1,0 +1,26 @@
+.audioController {
+  display: block;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+}
+
+.audioPlayButton,
+.audioStopButton,
+.audioGainPlusButton,
+.audioGainMinusButton {
+  background-color: #636363;
+  color: #f0f8ff;
+  box-shadow: none;
+  cursor: pointer;
+  width: 64px;
+  height: 32px;
+  margin-left: 10px;
+}
+
+.audioStop, .audioPlay {
+  display: block;
+  position: fixed;
+  left: 16px;
+  top: 16px;
+}
