@@ -4,11 +4,11 @@
 
 コードは以下にあります。
 
-[GitHub]()
+[GitHub](https://github.com/HosodaMath/ArtOFCode/tree/main/Festival/Year2022/AltEdu2022/day17/src)
 
 デモは以下にあります。
 
-[Demo]()
+[Demo](https://hosodamath.github.io/three3Sketch/)
 
 3色の色と3種類の図形（円、矩形、三角形）の3つを使い異なるパターンや変化などをスケッチを3つ作成して描きました。
 
@@ -25,7 +25,7 @@
 ![3つの図形がそれぞれ異なるタイミングで変化する図形](sketch2.png)
 
 
-3つめのコードは以下のようになります。
+3つめのコードの変化の割当は以下のようになります。
 
 円の変化は
 ```ts
@@ -41,5 +41,7 @@ rect(p, shapeSize * p.cos(p.frameCount * 0.005) * y * 0.1 );
 ```ts
 triangle(p, shapeSize * p.sin(p.frameCount * 0.005) * x * 0.1 );
 ```
+
+[sketch2の動画はここにあります](https://www.youtube.com/watch?v=JAe4bd47KLQ)
 
 本日は以上です。
