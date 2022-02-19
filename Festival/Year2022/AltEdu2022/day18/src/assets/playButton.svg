@@ -1,0 +1,6 @@
+<svg class="playButton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64"
+  height="64">
+  <metadata>@hosodaMath/Shingo Hosoda</metadata>
+  <rect class="backgroundColor" width="64" height="64" opacity="1.0" fill="#4e4e4e" />
+  <polygon points="10 10 54 32 10 54" fill="#e8fffd" />
+</svg>
