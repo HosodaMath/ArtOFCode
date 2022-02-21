@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    // TSはECMAScript 5に変換
+    "target": "ESNext",
+    // TSのモジュールはES Modulesとして出力
+    "module": "ESNext",
+    // node_modules からライブラリを読み込む
+    "moduleResolution": "node",
+    "lib": [
+      "es2020",
+      "dom"
+    ]
+  }
+}
