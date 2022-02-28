@@ -4,14 +4,14 @@
 
 p5.jsでイージングアニメーションを実装しました。
 
-
 コードは以下にあります。
 
-[GitHub]()
+[GitHub](https://github.com/HosodaMath/ArtOFCode/tree/main/Festival/Year2022/AltEdu2022/day22)
 
 デモは以下にあります。
 
-[Demo]()
+[Demo](https://hosodamath.github.io/studyEasingAnimation/)
 
+イージングアニメーションはほとんどcssでしか扱ったことないのでTypeScriptで扱うのはおもしろいです。今度c#(Unity)でも実装したいと思いました。
 
 本日は以上です。
