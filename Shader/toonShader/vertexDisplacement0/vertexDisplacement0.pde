@@ -5,8 +5,8 @@
 
 PShader toon;
 void setup() {
-  // size(620, 460, P3D);
-  fullScreen(P3D);
+  size(620, 460, P3D);
+  // fullScreen(P3D);
   noStroke();
 
   toon = loadShader("toon.frag", "toon.vert");
